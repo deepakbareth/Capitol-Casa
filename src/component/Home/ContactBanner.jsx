@@ -112,11 +112,11 @@ const ContactBanner = () => {
              
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 opacity-80" strokeWidth={1.5} />
-                <a href="mailto:stay@capitolcasa.com" className="hover:text-white transition-colors">Capitolcasa@gmail.com</a>
+                <p className="hover:text-white transition-colors">Capitolcasa@gmail.com</p>
               </li>
               <li className="flex items-center gap-3 pt-2">
                 <Phone className="w-5 h-5 opacity-80" strokeWidth={1.5} />
-                <a href="tel:+13109806850" className="text-lg font-medium hover:text-white transition-colors">+1 (505) 660 7652​</a>
+                <a href="tel:5056607652​" className="text-lg font-medium hover:text-white transition-colors">+1 (505) 660 7652​</a>
               </li>
             </ul>
 
