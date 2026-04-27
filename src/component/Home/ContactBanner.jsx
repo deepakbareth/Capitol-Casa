@@ -88,7 +88,7 @@ const ContactBanner = () => {
             <div className="flex flex-col items-center gap-2 mb-6">
              <img src={logo} alt="logo"className='w-30 h-25 rounded-xl' />
               <span className="text-2xl font-bold tracking-[0.2em] text-white uppercase mt-2">
-                Capital<span className="font-light">Casa</span>
+                Capitol<span className="font-light">Casa</span>
               </span>
               <span className="text-white/70 tracking-widest uppercase text-xs">Santa Fe, NM </span>
             </div>
@@ -121,11 +121,7 @@ const ContactBanner = () => {
             </ul>
 
             <div className="w-full max-w-[280px] space-y-3">
-              {/* Rental Application Button */}
-              <button className="w-full bg-[#1a1a1a] hover:bg-black text-white py-3 px-4 rounded flex items-center justify-center gap-2 text-sm font-medium transition-colors border border-white/10 shadow-lg">
-                <FileText className="w-4 h-4" />
-                Rental Application
-              </button>
+           
 
               {/* WhatsApp Button */}
               <button className="w-full bg-[#1da871] hover:bg-[#158f5e] text-white py-3 px-4 rounded flex items-center justify-center gap-2 text-sm font-medium transition-colors shadow-lg">

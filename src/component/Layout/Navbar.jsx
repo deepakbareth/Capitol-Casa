@@ -17,7 +17,7 @@ const Navbar = () => {
 
   // Updated menu items to use section IDs for a single-page landing experience
   const menuItems = [
-    { name: 'Home', href: '/capitolcasa/#' },
+    { name: 'Home', href: '/capitolcasa/' },
     { name: 'About Us', href: '/capitolcasa/#about' },
     { name: 'Mi Casa', href: '/capitolcasa/#micasa' },
     { name: 'Gallery', href: '/capitolcasa/#gallery' },
@@ -36,11 +36,11 @@ const Navbar = () => {
           <div className={`flex items-center ${isScrolled ? 'px-6 md:px-12 ' : 'px-8  md:px-12'}`}>
 
             {/* 1. Logo (Updated with Image) */}
-            <a href="#" className="flex items-center gap-3 flex-1">
+            <a href="/capitolcasa/" className="flex items-center gap-3 flex-1">
               <img 
                 src={logoImg} 
                 alt="Capitol Casa Fine Homes & Properties" 
-                className={`transition-all duration-500 object-contain ${isScrolled ? 'h-12 ' : 'w-10 md:w-30'} hover:scale-105`}
+                className={`transition-all duration-500 object-contain ${isScrolled ? 'h-12 ' : 'w-12 md:w-30'} hover:scale-105`}
               />
             </a>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
-        <div className={`absolute right-0 top-0 h-full w-[85%] max-w-[400px] bg-white shadow-[-20px_0_50px_rgba(0,0,0,0.1)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} overflow-hidden`}>
+        <div className={`absolute right-0 top-0  w-[85%] max-w-[400px] bg-white shadow-[-20px_0_50px_rgba(0,0,0,0.1)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} overflow-hidden`}>
 
           {/* Background decorative blurs matched to your logo colors */}
           <div className="absolute top-[-10%] left-[-10%] w-64 h-64 bg-[#fdf5e6]/60 rounded-full blur-3xl" />
@@ -107,11 +107,13 @@ const Navbar = () => {
               
               {/* Mobile Drawer Logo (Updated with Image) */}
               <div className="flex items-center">
+                 <a href="/capitolcasa/" className="flex items-center gap-3 flex-1">
                 <img 
                   src={logoImg} 
                   alt="Capitol Casa Fine Homes & Properties" 
-                  className="h-10 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
+                </a>
               </div>
 
               <button
@@ -135,7 +137,7 @@ const Navbar = () => {
                     <a
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group flex items-center justify-between p-4 rounded-2xl bg-gray-50/50 hover:bg-[#002855] transition-all duration-300"
+                      className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                     >
                       <span className="text-lg font-bold text-gray-700 group-hover:text-white transition-colors">
                         {item.name}
@@ -157,9 +159,9 @@ const Navbar = () => {
                   <a
                     href="#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="group flex items-center justify-between p-4 rounded-2xl bg-gray-50/50 hover:bg-[#002855] transition-all duration-300"
+                    className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   >
-                    <span className="text-lg font-bold text-gray-700 group-hover:text-white transition-colors">
+                    <span className="text-lg font-bold text-gray-700  group-hover:text-white transition-colors">
                       Contact Us
                     </span>
                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all transform">

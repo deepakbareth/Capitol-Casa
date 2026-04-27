@@ -26,7 +26,7 @@ const BookingSection = () => {
     icon: (
       <div className="flex items-center gap-1">
         <Bath className="w-5 h-5 md:w-6 md:h-6 text-[#54371b]" strokeWidth={1.5} />
-        <Info className="w-3.5 h-3.5 text-gray-500" />
+   
       </div>
     )
   },
