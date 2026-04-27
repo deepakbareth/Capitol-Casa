@@ -62,9 +62,9 @@ const Footer = () => {
             <ul className="space-y-3 text-base font-light text-gray-700">
               <li><NavLink to="/capitolcasa/" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Home</NavLink></li>
               <li><NavLink to="/capitolcasa/#about" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">About Us</NavLink></li>
-              <li><NavLink to="/capitolcasa/#property" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Our Property</NavLink></li>
+              <li><NavLink to="/capitolcasa/#micasa" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Mi Casa</NavLink></li>
               <li><NavLink to="/capitolcasa/#gallery" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Gallery</NavLink></li>
-              <li><NavLink to="/capitolcasa/#reviews" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Guest Reviews</NavLink></li>
+              <li><NavLink to="/capitolcasa/#reviews" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Reviews</NavLink></li>
             </ul>
           </div>
 
@@ -91,11 +91,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#54371b] shrink-0" strokeWidth={2} />
-                <a href="tel:+17578706426" className="hover:text-[#54371b] transition-colors">+1 (000) 111-000</a>
+                <a href="tel:+17578706426" className="hover:text-[#54371b] transition-colors">+1 (505) 660 7652​</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#54371b] shrink-0" strokeWidth={2} />
-                <a href="mailto:stay@capitolcasavacations.com" className="hover:text-[#54371b] transition-colors">stay@capitolcasa.com</a>
+                <a href="mailto:stay@capitolcasavacations.com" className="hover:text-[#54371b] transition-colors">Capitolcasa@gmail.com</a>
               </li>
             </ul>
           </div>

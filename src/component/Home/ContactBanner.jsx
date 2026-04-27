@@ -10,6 +10,8 @@ import {
   MessageCircle 
 } from 'lucide-react';
 import bgimg from '../../assets/images/h4.jpg';
+import logo from '../../assets/logo.png';
+
 
 const ContactBanner = () => {
   return (
@@ -84,9 +86,7 @@ const ContactBanner = () => {
             
             {/* Logo */}
             <div className="flex flex-col items-center gap-2 mb-6">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#001f3f] font-serif italic text-3xl shadow-lg">
-                C
-              </div>
+             <img src={logo} alt="logo"className='w-30 h-25 rounded-xl' />
               <span className="text-2xl font-bold tracking-[0.2em] text-white uppercase mt-2">
                 Capital<span className="font-light">Casa</span>
               </span>
@@ -112,11 +112,11 @@ const ContactBanner = () => {
              
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 opacity-80" strokeWidth={1.5} />
-                <a href="mailto:stay@capitolcasa.com" className="hover:text-white transition-colors">stay@capitolcasa.com</a>
+                <a href="mailto:stay@capitolcasa.com" className="hover:text-white transition-colors">Capitolcasa@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 pt-2">
                 <Phone className="w-5 h-5 opacity-80" strokeWidth={1.5} />
-                <a href="tel:+13109806850" className="text-lg font-medium hover:text-white transition-colors">+1 (000) 111-000</a>
+                <a href="tel:+13109806850" className="text-lg font-medium hover:text-white transition-colors">+1 (505) 660 7652​</a>
               </li>
             </ul>
 

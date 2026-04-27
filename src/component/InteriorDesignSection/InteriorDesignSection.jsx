@@ -39,9 +39,9 @@ const InteriorDesignSection = () => {
             />
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
-            Capitol Casa
-          </h2>
+         <h2 className="text-3xl md:text-5xl font-serif italic text-gray-900 leading-tight">
+              Capitol Casa
+            </h2>
           
           <p className="text-gray-500 text-lg leading-relaxed font-light">
             Experience the ultimate escape with unparalleled comfort

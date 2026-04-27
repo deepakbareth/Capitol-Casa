@@ -37,7 +37,7 @@ const GallerySlider = () => {
   // Auto-Slide Effect (Changes every 4 seconds)
   useEffect(() => {
     // if (!isPaused) {     // when mouse is not hovering, auto-slide
-      const slideInterval = setInterval(nextSlide, 3000);
+      const slideInterval = setInterval(nextSlide, 5000);
       return () => clearInterval(slideInterval);
     // }
   }, [isPaused, nextSlide]);
@@ -69,7 +69,7 @@ const GallerySlider = () => {
         {/* Header from your screenshot */}
    
            <h2 className="text-3xl md:text-5xl font-serif italic pb-12 text-gray-900 leading-tight">
-             Attractions & Stay in Style
+            Stay in Style
             </h2>
 
         {/* Carousel Container */}

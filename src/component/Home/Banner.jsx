@@ -51,7 +51,7 @@ const Banner = () => {
 
                         {/* Part 1: Main Name */}
                         <span className="text-3xl sm:text-5xl md:text-7xl  font-serif italic font-medium leading-none tracking-tight">
-                           The capitol casa
+                           The Capitol Casa
                         </span>
 
 

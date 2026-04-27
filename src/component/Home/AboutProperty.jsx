@@ -47,7 +47,7 @@ const AboutProperty = () => {
           <div className="space-y-3">
             <h4 className="text-[#8a4e15] font-bold uppercase tracking-[0.2em] text-xl">About this property</h4>
             <h2 className="text-3xl md:text-5xl font-serif italic text-gray-900 leading-tight">
-              capitol casa
+              Capitol Casa
             </h2>
             <p className="text-lg md:text-xl font-medium text-gray-600">
               Santa Fe, NM

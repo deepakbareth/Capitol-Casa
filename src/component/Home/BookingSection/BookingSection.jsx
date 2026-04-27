@@ -14,7 +14,8 @@ import {
   ChevronRight, 
   Calendar, 
   User, 
-  Info 
+  Info ,
+  Fan
 } from 'lucide-react';
 import { BookingDate } from './BookingDate';
 
@@ -38,9 +39,9 @@ const BookingSection = () => {
     icon: <WashingMachine className="w-5 h-5 md:w-6 md:h-6 text-[#54371b]" strokeWidth={1.5} /> 
   },
   { 
-    name: 'Dryer', 
-    icon: <WashingMachine className="w-5 h-5 md:w-6 md:h-6 text-[#54371b]" strokeWidth={1.5} /> 
-  },
+  name: 'Dryer', 
+  icon: <Fan className="w-5 h-5 md:w-6 md:h-6 text-[#54371b]" strokeWidth={1.5} /> 
+},
   { 
     name: 'Pet friendly', 
     icon: <PawPrint className="w-5 h-5 md:w-6 md:h-6 text-[#54371b]" strokeWidth={1.5} /> 
@@ -58,7 +59,7 @@ const BookingSection = () => {
         <div className="lg:col-span-7">
         
            <h2 className="text-3xl md:text-5xl font-serif italic text-gray-900 pb-8 leading-tight">
-              Popular amenities
+              Popular Amenities
             </h2>
           
           {/* MOBILE GRID FIX: Changed to `grid-cols-2` so it always stays side-by-side */}
@@ -89,7 +90,7 @@ const BookingSection = () => {
           <div className="bg-white p-6 md:p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
             
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Add dates for prices
+              Select dates for prices
             </h3>
 
             {/* Dates Row */}

@@ -8,7 +8,7 @@ const PropertySpecs = () => {
     { label: '5 Bedrooms', icon: <DoorClosed className="w-6 h-6" strokeWidth={1.5} /> },
     { label: '3 Bathrooms', icon: <Bath className="w-6 h-6" strokeWidth={1.5} /> },
     { label: 'Sleeps 16', icon: <Users className="w-6 h-6" strokeWidth={1.5} /> },
-    { label: '2600 sq ft', icon: <Maximize className="w-6 h-6" strokeWidth={1.5} /> },
+    { label: '2600 sq. ft.', icon: <Maximize className="w-6 h-6" strokeWidth={1.5} /> },
   ];
 
   return (
@@ -41,7 +41,7 @@ const PropertySpecs = () => {
           
           {/* Refined Typography combining bold and light italic text */}
           <h2 className="text-2xl lg:text-5xl text-center font-semibold text-gray-900 leading-[1.15] mb-2 md:mb-8 tracking-tight">
-            We Create a <br className="hidden md:block"/> <span className="italic text-stone-500 font-light">Comfortable</span> Space
+            We have Created a <br className="hidden md:block"/> <span className="italic text-stone-500 font-light">Comfortable</span> Space
           </h2>
 
           {/* Elevated Grid Layout for Specs */}

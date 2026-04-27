@@ -3,19 +3,19 @@ import { MapPin, Utensils, CarFront, TrainFront, Plane } from 'lucide-react';
 
 const LocationDetails = () => {
   const nearbyPlaces = [
-    { name: 'New Mexico State Capitol', distance: '2 min walk - 0.2 km' },
-    { name: 'Loretto Chapel', distance: '7 min walk - 0.6 km' },
-    { name: 'Canyon Road', distance: '7 min walk - 0.6 km' },
-    { name: 'Santa Fe Plaza', distance: '10 min walk - 0.9 km' },
-    { name: 'Georgia O\'Keefe Museum', distance: '12 min walk - 1.0 km' },
+    { name: 'New Mexico State Capitol', distance: '2 mins. walk - 0.2 km' },
+    { name: 'Loretto Chapel', distance: '7 mins. walk - 0.6 km' },
+    { name: 'Canyon Road', distance: '7 mins. walk - 0.6 km' },
+    { name: 'Santa Fe Plaza', distance: '10 mins. walk - 0.9 km' },
+    { name: 'Georgia O\'Keefe Museum', distance: '12 mins. walk - 1.0 km' },
   ];
 
   const restaurants = [
-    { name: 'Kakawa Chocolate House', distance: '6 min walk' },
-    { name: 'Del Charro', distance: '8 min walk' },
-    { name: 'Pantry Rio', distance: '9 min walk' },
-    { name: 'Gruet Tasting Room', distance: '9 min walk' },
-    { name: 'Zeng', distance: '7 min walk' },
+    { name: 'Kakawa Chocolate House', distance: '6 mins. walk' },
+    { name: 'Del Charro', distance: '8 mins. walk' },
+    { name: 'Pantry Rio', distance: '9 mins. walk' },
+    { name: 'Gruet Tasting Room', distance: '9 mins. walk' },
+    { name: 'Zeng', distance: '7 mins. walk' },
   ];
 
   return (
@@ -96,7 +96,7 @@ const LocationDetails = () => {
                 </div>
                 <div className="flex-1 mx-2 xl:mx-4 border-b-2 border-dotted border-gray-200 group-hover:border-[#8a4e15]/40 transition-colors relative top-[-6px]"></div>
                 <span className="text-gray-500 font-medium whitespace-nowrap shrink-0 text-xs md:text-sm xl:text-base">
-                  12 min walk
+                  12 mins. walk
                 </span>
               </li>
               
@@ -109,7 +109,7 @@ const LocationDetails = () => {
                 </div>
                 <div className="flex-1 mx-2 xl:mx-4 border-b-2 border-dotted border-gray-200 group-hover:border-[#8a4e15]/40 transition-colors relative top-[-6px]"></div>
                 <span className="text-gray-500 font-medium whitespace-nowrap shrink-0 text-xs md:text-sm xl:text-base">
-                  21 min drive
+                  21 mins. drive
                 </span>
               </li>
             </ul>
