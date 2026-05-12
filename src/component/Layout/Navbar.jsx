@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 // Import your logo image here. Adjust the path to match your project structure.
-import logoImg from '../../assets/logo1.png'; 
+import logoImg from '../../assets/logo1.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,10 +19,10 @@ const Navbar = () => {
   // Updated menu items to use section IDs for a single-page landing experience
   const menuItems = [
     { name: 'Home', href: '/capitolcasa/' },
-    { name: 'About Us', href: '/capitolcasa/#about' },
+    { name: 'The Host', href: '/capitolcasa/the-host' },
     { name: 'Mi Casa', href: '/capitolcasa/#micasa' },
-    { name: 'Gallery', href: '/capitolcasa/#gallery' },
-    { name: 'Reviews', href: '/capitolcasa/#reviews' },
+    { name: 'Gallery', href: '/capitolcasa/gallery' },
+    { name: 'Reviews', href: '/capitolcasa/reviews' },
   ];
 
   return (
@@ -30,38 +31,38 @@ const Navbar = () => {
       <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'top-0 px-0 py-0' : 'top-2 px-4 md:px-10  '
         }`}>
         <div className={`mx-auto transition-all duration-500 ${isScrolled
-            ? 'max-w-full rounded-none bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200 py-3'
-            : 'max-w-7xl rounded-full bg-white/95 backdrop-blur-md shadow-md py-2'
+          ? 'max-w-full rounded-full bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200 py-1'
+          : 'max-w-7xl rounded-full bg-white/55 backdrop-blur-md shadow-md py-1'
           }`}>
           <div className={`flex items-center ${isScrolled ? 'px-6 md:px-12 ' : 'px-8  md:px-12'}`}>
 
             {/* 1. Logo (Updated with Image) */}
-            <a href="/capitolcasa/" className="flex items-center gap-3 flex-1">
-              <img 
-                src={logoImg} 
-                alt="Capitol Casa Fine Homes & Properties" 
-                className={`transition-all duration-500 object-contain ${isScrolled ? 'h-12 ' : 'w-12 md:w-30'} hover:scale-105`}
+            <NavLink to="/capitolcasa/" className="flex items-center gap-3 flex-1">
+              <img
+                src={logoImg}
+                alt="Capitol Casa Fine Homes & Properties"
+                className={`transition-all duration-500 object-contain ${isScrolled ? 'h-18 ' : 'w-12 md:w-20'}`}
               />
-            </a>
+            </NavLink>
 
             {/* 2. Desktop Navigation */}
             <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
               {menuItems.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
+                  <NavLink
+                    to={item.href}
                     className="text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 relative group whitespace-nowrap text-black hover:text-[#002855]"
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 h-0.5 bg-[#8b5a2b] transition-all duration-300 w-0 group-hover:w-full"></span>
-                  </a>
+                  </NavLink>
                 </li>
               ))}
 
               {/* Desktop Contact Link */}
               <li>
                 <a
-                  href="#contact"
+                  href="contact-us"
                   className="flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 group whitespace-nowrap border-l border-gray-200 pl-6 ml-2 text-gray-900 hover:text-[#002855]"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-[#8b5a2b]">
@@ -104,16 +105,16 @@ const Navbar = () => {
           <div className="relative h-full flex flex-col p-8">
 
             <div className="flex justify-between items-start mb-12">
-              
+
               {/* Mobile Drawer Logo (Updated with Image) */}
               <div className="flex items-center">
-                 <a href="/capitolcasa/" className="flex items-center gap-3 flex-1">
-                <img 
-                  src={logoImg} 
-                  alt="Capitol Casa Fine Homes & Properties" 
-                  className="h-20 w-auto object-contain"
-                />
-                </a>
+                <NavLink to="/capitolcasa/" className="flex items-center gap-3 flex-1">
+                  <img
+                    src={logoImg}
+                    alt="Capitol Casa Fine Homes & Properties"
+                    className="h-20 w-auto object-contain"
+                  />
+                </NavLink>
               </div>
 
               <button
@@ -134,8 +135,8 @@ const Navbar = () => {
                     style={{ transitionDelay: `${index * 80}ms` }}
                     className={`transform transition-all duration-700 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
                   >
-                    <a
-                      href={item.href}
+                    <NavLink
+                      to={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                     >
@@ -147,7 +148,7 @@ const Navbar = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
 
@@ -157,7 +158,7 @@ const Navbar = () => {
                   className={`transform transition-all duration-700 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
                 >
                   <a
-                    href="#contact"
+                    href="contact-us"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
                   >

@@ -13,9 +13,9 @@ const AboutUsPage = () => {
     <main className="min-h-screen bg-[#faf4e1]">
       <AboutHero />
       <AboutStory />
-      <AboutAmenities />
+      {/* <AboutAmenities />
       <AboutFloorPlan />
-      <AboutDetails />
+      <AboutDetails /> */}
     </main>
   );
 };

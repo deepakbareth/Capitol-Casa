@@ -7,15 +7,15 @@ const ContactInfo = () => {
       <div className="bg-[#001f3f] text-white p-10 rounded-2xl shadow-xl h-full relative overflow-hidden group">
         {/* Decorative background element */}
         <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150"></div>
-        
+
         <h3 className="text-3xl font-serif italic mb-8 relative z-10">Contact Details</h3>
-        
+
         <div className="space-y-8 relative z-10">
-          
+
           {/* Host Info */}
           <div>
             <h5 className="text-[#8a4e15] font-bold tracking-widest uppercase text-xs mb-1">Your Host</h5>
-            <p className="text-xl font-light">Steve Exum</p>
+            <p className="text-xl font-light">Kristen</p>
           </div>
 
           {/* Email */}
@@ -25,8 +25,8 @@ const ContactInfo = () => {
             </div>
             <div>
               <h5 className="text-[#8a4e15] font-bold tracking-widest uppercase text-xs mb-1">Email Us</h5>
-              <a href="mailto:booking@exumbeach.com" className="text-lg font-light hover:text-[#8a4e15] transition-colors">
-                booking@exumbeach.com
+              <a href="mailto:Capitolcasa@gmail.com" className="text-lg font-light hover:text-[#8a4e15] transition-colors">
+                Capitolcasa@gmail.com
               </a>
             </div>
           </div>
@@ -38,8 +38,8 @@ const ContactInfo = () => {
             </div>
             <div>
               <h5 className="text-[#8a4e15] font-bold tracking-widest uppercase text-xs mb-1">Call Us</h5>
-              <a href="tel:+1234567890" className="text-lg font-light hover:text-[#8a4e15] transition-colors">
-                (111) 111-111
+              <a href="tel:+15056607652​" className="text-lg font-light hover:text-[#8a4e15] transition-colors">
+                +1 (505) 660 7652
               </a>
             </div>
           </div>
@@ -52,7 +52,7 @@ const ContactInfo = () => {
             <div>
               <h5 className="text-[#8a4e15] font-bold tracking-widest uppercase text-xs mb-1">Location</h5>
               <p className="text-lg font-light leading-relaxed">
-                Atlantic Beach, North Carolina
+                Santa Fe, NM
               </p>
             </div>
           </div>

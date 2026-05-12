@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 // Import an image for the right side. Replace with an actual property image.
 import propertyImg from '../../assets/images/h4.jpg';
 import {
@@ -59,20 +60,20 @@ const AboutProperty = () => {
             <p>
               Walk everywhere in the Historic Downtown area! Capitol Casa is located on a quiet residential street just three blocks long--less than a 5-minute walk to the Plaza and to Canyon Road. The historic 1920's adobe home has fresh furnishings, fine linens, original art and neat antiques in cohesive, tasteful decor reflecting the region. Its perfect location is 1/2 block from the State Capitol with its extensive art collection by New Mexico's many fine artists and sculptors.  </p>
 
-         
-            
+
+
           </div>
 
           {/* See More / See Less Button */}
-        <div>
-  <a
-    href="/capitolcasa/#micasa"
-   className="px-10 py-3.5 bg-[#8a4e15] text-white rounded-full font-bold uppercase tracking-[0.15em] text-sm shadow-md hover:shadow-lg hover:bg-[#724012] transition-all duration-300 transform hover:-translate-y-1"
-        >
-    See More
-  
-  </a>
-</div>
+          <div>
+            <NavLink
+              to="/capitolcasa/the-host"
+              className="px-10 py-3.5 bg-[#8a4e15] text-white rounded-full font-bold uppercase tracking-[0.15em] text-sm shadow-md hover:shadow-lg hover:bg-[#724012] transition-all duration-300 transform hover:-translate-y-1"
+            >
+              See More
+
+            </NavLink>
+          </div>
         </div>
 
         {/* === RIGHT COLUMN: IMAGE & AMENITIES OVERLAY === */}

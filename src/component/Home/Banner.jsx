@@ -30,7 +30,7 @@ const Banner = () => {
                 >
                     <img
                         src={img}
-                        alt={`Exum Paradise ${i}`}
+                        alt={`The Capitol Casa ${i}`}
                         className="absolute inset-0 h-full w-full object-cover object-center "
                     />
                 </div>
@@ -44,21 +44,21 @@ const Banner = () => {
 
                 <div className="max-w-6xl space-y-4 md:space-y-12">
 
-                  
+
 
                     {/* Headline Section */}
                     <h1 className="flex flex-col items-center animate-fade-in-down delay-200 p-3 mt-50 rounded-full px-10">
 
                         {/* Part 1: Main Name */}
                         <span className="text-3xl sm:text-5xl md:text-7xl  font-serif italic font-medium leading-none tracking-tight">
-                           The Capitol Casa
+                            The Capitol Casa
                         </span>
 
 
-                   
+
                     </h1>
 
-                    
+
                 </div>
             </div>
 

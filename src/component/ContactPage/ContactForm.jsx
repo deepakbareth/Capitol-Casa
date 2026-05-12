@@ -26,7 +26,7 @@ const ContactForm = () => {
     // Here you would normally send the data to a backend or email service
     console.log('Form Submitted:', formData);
     setIsSubmitted(true);
-    
+
     // Reset form after a few seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -37,7 +37,7 @@ const ContactForm = () => {
   return (
     <div className="lg:col-span-3 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
       <h3 className="text-2xl font-serif text-[#001f3f] mb-8">Send an Inquiry</h3>
-      
+
       {isSubmitted ? (
         // Success Message
         <div className="h-full flex flex-col items-center justify-center text-center animate-fade-in py-12">
@@ -56,8 +56,8 @@ const ContactForm = () => {
             {/* Name Input */}
             <div className="space-y-2">
               <label className="text-sm font-bold text-gray-700 tracking-wider uppercase">Full Name</label>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -70,14 +70,14 @@ const ContactForm = () => {
             {/* Email Input */}
             <div className="space-y-2">
               <label className="text-sm font-bold text-gray-700 tracking-wider uppercase">Email Address</label>
-              <input 
-                type="email" 
+              <input
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
                 className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 focus:bg-white focus:border-[#8a4e15] focus:ring-2 focus:ring-[#8a4e15]/20 outline-none transition-all duration-300"
-                placeholder="jane@example.com"
+                placeholder="Janedoe@gmail.com"
               />
             </div>
           </div>
@@ -86,8 +86,8 @@ const ContactForm = () => {
             {/* Phone Input */}
             <div className="space-y-2">
               <label className="text-sm font-bold text-gray-700 tracking-wider uppercase">Phone Number</label>
-              <input 
-                type="tel" 
+              <input
+                type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
@@ -99,8 +99,8 @@ const ContactForm = () => {
             {/* Dates Input */}
             <div className="space-y-2">
               <label className="text-sm font-bold text-gray-700 tracking-wider uppercase">Desired Dates</label>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 name="dates"
                 value={formData.dates}
                 onChange={handleChange}
@@ -113,7 +113,7 @@ const ContactForm = () => {
           {/* Message Textarea */}
           <div className="space-y-2">
             <label className="text-sm font-bold text-gray-700 tracking-wider uppercase">Your Message</label>
-            <textarea 
+            <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
@@ -125,7 +125,7 @@ const ContactForm = () => {
           </div>
 
           {/* Submit Button */}
-          <button 
+          <button
             type="submit"
             className="w-full md:w-auto flex items-center justify-center gap-3 px-10 py-4 bg-[#001f3f] text-white rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8a4e15] shadow-md hover:shadow-lg transition-all duration-300"
           >
