@@ -45,7 +45,7 @@ const ReviewsPage = () => {
       {/* === HERO BANNER === */}
       {/* Added pt-24 so it sits right under your fixed Navbar without being hidden */}
       <div
-        className="relative w-full h-[35vh] md:h-[65vh] min-h-[300px] flex items-center bg-cover bg-center pt-24"
+        className="relative w-full h-[35vh] md:h-[55vh] min-h-[300px] flex items-center bg-cover bg-center pt-24"
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
         {/* Dark gradient overlay so the white text pops */}
