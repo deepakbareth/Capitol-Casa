@@ -80,10 +80,10 @@ const AccommodationDetails = () => {
     ];
 
     return (
-        <section id='accommodation' className="max-w-full mx-auto px-4 rounded-xl sm:px-6 lg:px-8 py-16 my-8 text-[#1a2b3c] bg-white">
+        <section id='accommodation' className="max-w-full px-4 rounded-xl sm:px-6 lg:px-8 py-16 my-8 text-[#1a2b3c] bg-white">
 
             {/* --- ROOMS & BEDS SECTION --- */}
-            <div className="mb-16 max-w-7xl mx-auto md:px-6 ">
+            <div className="mb-16  mx-auto md:px-6 ">
                 <h2 style={{ fontFamily: "'Futura PT', serif" }} className="text-4xl md:text-5xl font-medium tracking-wide mb-2">
                     Rooms & beds
                 </h2>
@@ -110,7 +110,7 @@ const AccommodationDetails = () => {
             <hr className="border-t border-gray-300/60 my-12" />
 
             {/* --- BATHROOMS SECTION --- */}
-            <div className='max-w-7xl mx-auto md:px-6 '>
+            <div className='"mb-16  mx-auto md:px-6 '>
                 <h2 style={{ fontFamily: "'Futura PT', serif" }} className="text-3xl md:text-4xl font-medium tracking-wide mb-10">
                     3 bathrooms
                 </h2>

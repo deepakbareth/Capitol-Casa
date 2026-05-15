@@ -10,8 +10,8 @@ import {
 
 const HouseRules = () => {
     return (
-        <section className="max-w-full mx-auto px-4 rounded-xl my-8 sm:px-6 lg:px-6 py-16 text-[#1a2b3c] bg-white">
-            <div className=" md:px-9">
+        <section className="max-w-full  px-4 rounded-xl my-8 sm:px-6 lg:px-6 py-16 text-[#1a2b3c] bg-white">
+            <div className="md:px-6">
 
                 {/* Header */}
                 <h2 style={{ fontFamily: "'Futura PT', serif" }} className="text-4xl md:text-5xl font-medium tracking-wide mb-2">

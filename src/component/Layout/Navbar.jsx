@@ -31,7 +31,7 @@ const Navbar = () => {
       <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'top-0 px-0 py-0' : 'top-2 px-4 md:px-10  '
         }`}>
         <div className={`mx-auto transition-all duration-500 ${isScrolled
-          ? 'max-w-full rounded-full bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200 py-1'
+          ? 'max-w-full rounded-full bg-white/95 backdrop-blur-md shadow-lg border-none py-1'
           : 'max-w-7xl rounded-full bg-white/55 backdrop-blur-md shadow-md py-1'
           }`}>
           <div className={`flex items-center ${isScrolled ? 'px-6 md:px-12 ' : 'px-8  md:px-12'}`}>

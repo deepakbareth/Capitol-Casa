@@ -62,7 +62,7 @@ const Footer = () => {
             <ul className="space-y-3 text-base font-light text-gray-700">
               <li><NavLink to="/capitolcasa/" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Home</NavLink></li>
               <li><NavLink to="/capitolcasa/the-host" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">The Host</NavLink></li>
-              <li><NavLink to="/capitolcasa/#micasa" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Mi Casa</NavLink></li>
+              <li><NavLink to="/capitolcasa/mi-casa" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Mi Casa</NavLink></li>
               <li><NavLink to="/capitolcasa/gallery" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Gallery</NavLink></li>
               <li><NavLink to="/capitolcasa/reviews" className="hover:text-[#54371b] hover:underline underline-offset-4 transition-all">Reviews</NavLink></li>
             </ul>

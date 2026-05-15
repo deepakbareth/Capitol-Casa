@@ -57,11 +57,11 @@ const VillaSpaces = () => {
     ];
 
     return (
-        <section className="max-w-full mx-auto px-4 rounded-xl my-8 sm:px-6 lg:px-6 py-16 text-[#1a2b3c] bg-white">
-            <div className="max-w-7xl mx-auto md:px-6">
+        <section className="max-w-full  px-4 sm:px-6 lg:px-6 py-16 text-[#1a2b3c] bg-white">
+            <div className="md:px-6">
 
                 {/* Header */}
-                <h2 style={{ fontFamily: "'Futura PT', serif" }} className="text-3xl md:text-4xl font-medium tracking-wide mb-10">
+                <h2 style={{ fontFamily: "'Futura PT', serif" }} className="text-4xl md:text-5xl pb-6 font-medium tracking-widemb-10">
                     Spaces
                 </h2>
 
