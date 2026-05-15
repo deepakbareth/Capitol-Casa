@@ -127,7 +127,7 @@ const ContactForm = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full md:w-auto flex items-center justify-center gap-3 px-10 py-4 bg-[#001f3f] text-white rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8a4e15] shadow-md hover:shadow-lg transition-all duration-300"
+            className="w-full md:w-auto flex items-center justify-center gap-3 px-10 py-4 bg-[#8a4e15] cursor-pointer text-white rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8a4e15]/80 shadow-md hover:shadow-lg transition-all duration-300"
           >
             <span>Send Message</span>
             <Send className="w-4 h-4" />

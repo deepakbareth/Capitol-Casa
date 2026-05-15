@@ -28,15 +28,14 @@ const Navbar = () => {
   return (
     <>
       {/* --- MAIN NAVBAR --- */}
-      <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'top-0 px-0 py-0' : 'top-2 px-4 md:px-10  '
-        }`}>
+      <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'top-0 px-0 py-0' : 'top-2 px-4 md:px-10'}`}>
         <div className={`mx-auto transition-all duration-500 ${isScrolled
           ? 'max-w-full rounded-full bg-white/95 backdrop-blur-md shadow-lg border-none py-1'
           : 'max-w-7xl rounded-full bg-white/55 backdrop-blur-md shadow-md py-1'
           }`}>
-          <div className={`flex items-center ${isScrolled ? 'px-6 md:px-12 ' : 'px-8  md:px-12'}`}>
+          <div className={`flex items-center ${isScrolled ? 'px-6 md:px-12 ' : 'px-8 md:px-12'}`}>
 
-            {/* 1. Logo (Updated with Image) */}
+            {/* 1. Logo */}
             <NavLink to="/capitolcasa/" className="flex items-center gap-3 flex-1">
               <img
                 src={logoImg}
@@ -49,27 +48,42 @@ const Navbar = () => {
             <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
               {menuItems.map((item) => (
                 <li key={item.name}>
+                  {/* Desktop Active Logic Added Here */}
                   <NavLink
                     to={item.href}
-                    className="text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 relative group whitespace-nowrap text-black hover:text-[#002855]"
+                    end={item.href === '/capitolcasa/'} // Ensures "Home" is only active when path is exact
+                    className={({ isActive }) =>
+                      `text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 relative group whitespace-nowrap ${isActive ? 'text-[#002855]' : 'text-black hover:text-[#002855]'
+                      }`
+                    }
                   >
-                    {item.name}
-                    <span className="absolute -bottom-1 left-0 h-0.5 bg-[#8b5a2b] transition-all duration-300 w-0 group-hover:w-full"></span>
+                    {({ isActive }) => (
+                      <>
+                        {item.name}
+                        {/* The gold underline stays permanently full width if active */}
+                        <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#8b5a2b] transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                          }`}
+                        ></span>
+                      </>
+                    )}
                   </NavLink>
                 </li>
               ))}
 
               {/* Desktop Contact Link */}
               <li>
-                <a
-                  href="contact-us"
-                  className="flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 group whitespace-nowrap border-l border-gray-200 pl-6 ml-2 text-gray-900 hover:text-[#002855]"
+                <NavLink
+                  to="/capitolcasa/contact-us"
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-bold transition-all duration-300 group whitespace-nowrap border-l border-gray-200 pl-6 ml-2 ${isActive ? 'text-[#002855]' : 'text-gray-900 hover:text-[#002855]'
+                    }`
+                  }
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-[#8b5a2b]">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
                   Contact Us
-                </a>
+                </NavLink>
               </li>
             </ul>
 
@@ -96,19 +110,18 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
-        <div className={`absolute right-0 top-0  w-[85%] max-w-[400px] bg-white shadow-[-20px_0_50px_rgba(0,0,0,0.1)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} overflow-hidden`}>
+        <div className={`absolute right-0 top-0 w-[85%] max-w-[400px] bg-white shadow-[-20px_0_50px_rgba(0,0,0,0.1)] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} overflow-hidden h-full`}>
 
           {/* Background decorative blurs matched to your logo colors */}
-          <div className="absolute top-[-10%] left-[-10%] w-64 h-64 bg-[#fdf5e6]/60 rounded-full blur-3xl" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-64 h-64 bg-[#002855]/10 rounded-full blur-3xl" />
+          <div className="absolute top-[-10%] left-[-10%] w-64 h-64 bg-[#fdf5e6]/60 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-64 h-64 bg-[#002855]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative h-full flex flex-col p-8">
+          <div className="relative h-full flex flex-col p-8 overflow-y-auto">
 
             <div className="flex justify-between items-start mb-12">
-
-              {/* Mobile Drawer Logo (Updated with Image) */}
+              {/* Mobile Drawer Logo */}
               <div className="flex items-center">
-                <NavLink to="/capitolcasa/" className="flex items-center gap-3 flex-1">
+                <NavLink to="/capitolcasa/" className="flex items-center gap-3 flex-1" onClick={() => setIsMobileMenuOpen(false)}>
                   <img
                     src={logoImg}
                     alt="Capitol Casa Fine Homes & Properties"
@@ -135,19 +148,33 @@ const Navbar = () => {
                     style={{ transitionDelay: `${index * 80}ms` }}
                     className={`transform transition-all duration-700 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
                   >
+                    {/* Mobile Active Logic Added Here */}
                     <NavLink
                       to={item.href}
+                      end={item.href === '/capitolcasa/'}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+                      className={({ isActive }) =>
+                        `group flex items-center justify-between p-4 rounded-2xl transition-all duration-300 ${isActive ? 'bg-[#8a4e15]' : 'bg-gray-100 hover:bg-gray-200'
+                        }`
+                      }
                     >
-                      <span className="text-lg font-bold text-gray-700 group-hover:text-white transition-colors">
-                        {item.name}
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all transform">
-                        <svg className="w-4 h-4 text-[#8b5a2b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
+                      {({ isActive }) => (
+                        <>
+                          <span className={`text-lg font-bold transition-colors ${isActive ? 'text-white' : 'text-gray-700 group-hover:text-[#002855]'
+                            }`}
+                          >
+                            {item.name}
+                          </span>
+                          {/* The arrow icon stays fully visible if active */}
+                          <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center transition-all transform ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100'
+                            }`}
+                          >
+                            <svg className="w-4 h-4 text-[#8b5a2b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </>
+                      )}
                     </NavLink>
                   </li>
                 ))}
@@ -157,20 +184,31 @@ const Navbar = () => {
                   style={{ transitionDelay: `${menuItems.length * 80}ms` }}
                   className={`transform transition-all duration-700 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}
                 >
-                  <a
-                    href="contact-us"
+                  <NavLink
+                    to="/capitolcasa/contact-us"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="group flex items-center justify-between p-4 rounded-2xl bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+                    className={({ isActive }) =>
+                      `group flex items-center justify-between p-4 rounded-2xl transition-all duration-300 ${isActive ? 'bg-[#002855]' : 'bg-gray-100 hover:bg-gray-200'
+                      }`
+                    }
                   >
-                    <span className="text-lg font-bold text-gray-700  group-hover:text-white transition-colors">
-                      Contact Us
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all transform">
-                      <svg className="w-4 h-4 text-[#8b5a2b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </a>
+                    {({ isActive }) => (
+                      <>
+                        <span className={`text-lg font-bold transition-colors ${isActive ? 'text-white' : 'text-gray-700 group-hover:text-[#002855]'
+                          }`}
+                        >
+                          Contact Us
+                        </span>
+                        <div className={`w-8 h-8 rounded-full bg-white flex items-center justify-center transition-all transform ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100'
+                          }`}
+                        >
+                          <svg className="w-4 h-4 text-[#8b5a2b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </>
+                    )}
+                  </NavLink>
                 </li>
 
               </ul>
