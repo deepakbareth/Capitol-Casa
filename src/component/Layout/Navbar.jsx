@@ -20,7 +20,7 @@ const Navbar = () => {
   const menuItems = [
     { name: 'Home', href: '/capitolcasa/' },
     { name: 'The Host', href: '/capitolcasa/the-host' },
-    { name: 'Mi Casa', href: '/capitolcasa/#micasa' },
+    { name: 'Mi Casa', href: '/capitolcasa/mi-casa' },
     { name: 'Gallery', href: '/capitolcasa/gallery' },
     { name: 'Reviews', href: '/capitolcasa/reviews' },
   ];
